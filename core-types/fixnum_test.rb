@@ -47,31 +47,31 @@ class FixnumTest < Minitest::Homework
   end
 
   def test_succ
-    assert_equal __, 1.succ
-    assert_equal __, 17.succ
-    assert_equal __, 30.succ
+    assert_equal 2, 1.succ
+    assert_equal 18, 17.succ
+    assert_equal 31, 30.succ
   end
 
   def test_pred
-    assert_equal __, 99.pred
-    assert_equal __, 13.pred
-    assert_equal __, 8.pred
+    assert_equal 98, 99.pred
+    assert_equal 12, 13.pred
+    assert_equal 7, 8.pred
   end
 
   def test_even
-    maybe 7.even?
-    maybe 6.even?
-    maybe 0.even?
+    refute 7.even?
+    assert 6.even?
+    assert 0.even?
   end
 
   def test_odd
-    maybe 4.odd?
-    maybe 9.odd?
-    maybe 13.odd?
+    refute 4.odd?
+    assert 9.odd?
+    assert 13.odd?
   end
 
   def test_zero
-    maybe 0.zero?
-    maybe 1.zero?
+    assert 0.zero?
+    refute 1.zero?
   end
 end
