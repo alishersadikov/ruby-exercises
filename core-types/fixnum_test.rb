@@ -8,42 +8,42 @@ class FixnumTest < Minitest::Homework
   be_gentle!
 
   def test_add
-    assert_equal __, 6.send(:+, 3)
-    assert_equal __, (7.+ 2)
-    assert_equal __, (8 + 5)
+    assert_equal 9, 6.send(:+, 3)
+    assert_equal 9, (7.+ 2)
+    assert_equal 13, (8 + 5)
   end
 
   def test_subtract
-    assert_equal __, 2.send(:-, 1)
-    assert_equal __, (5.- 8)
-    assert_equal __, (10 - 3)
+    assert_equal 1, 2.send(:-, 1)
+    assert_equal -3, (5.- 8)
+    assert_equal 7, (10 - 3)
   end
 
   def test_divide
-    assert_equal __, 9.send(:/, 3)
-    assert_equal __, (12./ 3)
-    assert_equal __, (18 / 6)
-    assert_equal __, (18 / 7)
-    assert_equal __, (18.0 / 7)
-    assert_equal __, (18 / 7.0)
+    assert_equal 3, 9.send(:/, 3)
+    assert_equal 4, (12./ 3)
+    assert_equal 3, (18 / 6)
+    assert_equal 2, (18 / 7)
+    assert_equal 2.5714285714285716, (18.0 / 7)
+    assert_equal 2.5714285714285716, (18 / 7.0)
   end
 
   def test_multiply
-    assert_equal __, 3.send(:*, 5)
-    assert_equal __, (8.* 4)
-    assert_equal __, (2 * 7)
+    assert_equal 15, 3.send(:*, 5)
+    assert_equal 32, (8.* 4)
+    assert_equal 14, (2 * 7)
   end
 
   def test_power
-    assert_equal __, 2.send(:**, 3)
-    assert_equal __, (3.** 4)
-    assert_equal __, (1 ** 18)
+    assert_equal 8, 2.send(:**, 3)
+    assert_equal 81, (3.** 4)
+    assert_equal 1, (1 ** 18)
   end
 
   def test_modulo
-    assert_equal __, 8.send(:%, 2)
-    assert_equal __, (8.% 3)
-    assert_equal __, (8 % 5)
+    assert_equal 0, 8.send(:%, 2)
+    assert_equal 2, (8.% 3)
+    assert_equal 3, (8 % 5)
   end
 
   def test_succ
