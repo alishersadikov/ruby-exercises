@@ -252,6 +252,6 @@ class StringTest < Minitest::Homework
     assert_equal "ticting", "kicking".gsub('k', 't')
     assert_equal "kicking", "kicking".gsub('f', 't')
     assert_equal "toctong", "kicking".gsub('ki', 'to')
-    assert_equal "k*ck*", "kicking".gsub(/[aeiou]/, '*')
+    assert_equal "k*ck*ng", "kicking".gsub(/[aeiou]/, '*')
   end
 end
