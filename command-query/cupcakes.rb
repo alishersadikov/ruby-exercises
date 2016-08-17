@@ -1,12 +1,14 @@
+require 'pry'
 class Cupcakes
   def initialize
     @cupcakes = []
   end
 
   def sweetest
-    @cupcakes.sort_by {|cupcake|
+    cupcakes_by_sweetness = @cupcakes.sort_by do |cupcake|
       cupcake.sugar
-    }.last
+    end
+    cupcakes_by_sweetness.last
   end
 
   def <<(cupcake)
