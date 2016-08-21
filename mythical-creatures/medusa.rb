@@ -11,22 +11,25 @@ class Medusa
   end
 
   def stare(victim)
-    victim = 
-    @statues << victim
-  end
-
-
+    victim.stoned_status = true
+    if @statues.count < 3
+      @statues << victim
+    else
+      @statues.first.stoned_status = false
+    end
+  end 
 end
 
 class Person
   attr_reader :name
+  attr_accessor :stoned_status
 
-  def initialize(name, stoned = false)
+  def initialize(name, stoned_status = false)
     @name = name
-    @stoned = stoned
+    @stoned_status = stoned_status
   end
 
   def stoned?
-    @stoned
+    @stoned_status
   end
 end
